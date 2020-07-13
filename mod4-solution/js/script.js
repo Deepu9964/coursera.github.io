@@ -1,12 +1,12 @@
-var names=["John", "Mary","Joe","Deepak","Lilly","Jane","Patrick","Lisbon","Jeevan","Anand","Umang","Jay"];
-for (var name in names){
-    var j="J";
-    if(names[name].startsWith(j))
-    {
-        console.log("GoodBye J" + names[name]); 
+
+(function(window) {
+    var names = ["John", "Mary","Joe","Deepak","Lilly","Jane","Patrick","Lisbon","Jeevan","Anand","Umang","Jay"];
+    for (var i = 0; i < names.length; i++) {
+        var firstLetter = names[i].charAt(0).toLowerCase();
+        if (firstLetter === 'j') {
+            byeSpeaker.speak(names[i]);
+        } else {
+            helloSpeaker.speak(names[i]);
+        }
     }
-    else
-    {
-        console.log("Hello " + names[name]);
-}
-}
+})(window);
